@@ -2,11 +2,9 @@
 
 A professional, interactive CV/resume builder application built with React. Create, edit, and download your resume in minutes with a real-time preview.
 
-![CV Builder Screenshot](public/images/placeholder-screenshot.svg)
-
 ## 🌟 Live Demo
 
-Check out the live demo: [CV Builder Live Demo](https://your-live-demo-url-here.com)
+Check out the live demo: [CV Builder Live Demo](https://cv-application-five-flame.vercel.app/)
 
 ## ✨ Features
 
