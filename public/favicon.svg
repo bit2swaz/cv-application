@@ -1,9 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <rect x="2" y="3" width="20" height="18" rx="2" />
-  <path d="M16 8h2" />
-  <path d="M16 12h2" />
-  <path d="M16 16h2" />
-  <path d="M8 8h4" />
-  <path d="M6 12h8" />
-  <path d="M6 16h8" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>
+    circle, rect, path, line {
+      stroke: #333;
+    }
+    @media (prefers-color-scheme: dark) {
+      circle, rect, path, line {
+        stroke: #fff;
+      }
+    }
+  </style>
+  <rect x="2" y="3" width="20" height="18" rx="2" stroke="currentColor" />
+  <line x1="7" y1="3" x2="7" y2="21" stroke="currentColor" />
+  <path d="M11 8h7" stroke="currentColor" />
+  <path d="M11 12h7" stroke="currentColor" />
+  <path d="M11 16h7" stroke="currentColor" />
+  <circle cx="4.5" cy="8" r="1" stroke="currentColor" fill="#4a6fff" />
+  <circle cx="4.5" cy="12" r="1" stroke="currentColor" fill="#4a6fff" />
+  <circle cx="4.5" cy="16" r="1" stroke="currentColor" fill="#4a6fff" />
 </svg> 

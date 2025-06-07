@@ -5,7 +5,7 @@ function Header() {
   return (
     <header className="header">
       <div className="header-content">
-        <h1>Resume Builder</h1>
+        <h1>CV Builder</h1>
         <p>Create your professional resume in minutes</p>
       </div>
     </header>

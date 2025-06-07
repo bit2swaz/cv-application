@@ -132,7 +132,9 @@ function App() {
         </div>
       </main>
       <footer className="app-footer">
-        <p>Resume Builder | by bit2swaz</p>
+        <p>
+          CV Builder | Made with <span className="heart">❤</span> by <a href="https://github.com/bit2swaz" target="_blank" rel="noopener noreferrer">bit2swaz</a>
+        </p>
       </footer>
     </div>
   )

@@ -3,12 +3,19 @@ import { useReactToPrint } from 'react-to-print';
 import '../styles/ResumePreview.css';
 
 function ResumePreview({ generalInfo, educationList, experienceList }) {
-  const resumeRef = useRef();
+  const resumeRef = useRef(null);
 
   const handlePrint = useReactToPrint({
     content: () => resumeRef.current,
     documentTitle: `${generalInfo.fullName || 'Resume'}_CV`,
+    onBeforeGetContent: () => {
+      return new Promise((resolve) => {
+        console.log("Preparing document...");
+        resolve();
+      });
+    },
     onAfterPrint: () => console.log('Document printed successfully!'),
+    removeAfterPrint: true,
   });
 
   return (

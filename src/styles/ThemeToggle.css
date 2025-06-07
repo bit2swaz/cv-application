@@ -3,8 +3,8 @@
   top: 1rem;
   right: 1rem;
   z-index: 1000;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   border: none;
   display: flex;
@@ -30,6 +30,6 @@
 }
 
 .theme-toggle svg {
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
 } 
