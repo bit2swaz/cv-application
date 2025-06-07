@@ -1,0 +1,45 @@
+.experience-display {
+  margin-bottom: 1.5rem;
+}
+
+.experience-header {
+  margin-bottom: 0.25rem;
+}
+
+.experience-position {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 0.25rem 0;
+}
+
+.experience-company {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.25rem;
+}
+
+.experience-dates {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+.experience-responsibilities {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.experience-responsibilities p {
+  margin: 0;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+} 

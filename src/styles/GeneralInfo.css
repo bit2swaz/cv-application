@@ -1,0 +1,21 @@
+.general-info-display {
+  padding: 0.5rem 0;
+}
+
+.general-info-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 0.5rem 0;
+}
+
+.general-info-contact {
+  display: flex;
+  gap: 1rem;
+  color: #555;
+}
+
+.general-info-contact p {
+  margin: 0;
+  font-size: 0.9rem;
+} 
