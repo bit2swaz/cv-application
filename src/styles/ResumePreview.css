@@ -1,12 +1,13 @@
 .resume-preview {
   background-color: white;
   padding: 2rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px var(--shadow-color);
   font-family: 'Times New Roman', Times, serif;
   max-width: 8.5in;
   margin: 0 auto;
   min-height: 11in;
   position: relative;
+  border: 1px solid #e0e0e0;
 }
 
 .resume-header {
@@ -17,18 +18,19 @@
 }
 
 .resume-name {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
   margin: 0;
   margin-bottom: 0.5rem;
   color: #333;
+  letter-spacing: 0.5px;
 }
 
 .resume-contact {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #555;
 }
 
@@ -39,6 +41,7 @@
   margin-bottom: 1rem;
   color: #333;
   text-transform: uppercase;
+  letter-spacing: 1px;
   border-bottom: 1px solid #e0e0e0;
   padding-bottom: 0.25rem;
 }
@@ -48,7 +51,7 @@
 }
 
 .education-item, .experience-item {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .education-header, .experience-header {
@@ -59,7 +62,7 @@
 }
 
 .education-school, .experience-position {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 600;
   margin: 0;
   color: #333;
@@ -68,18 +71,19 @@
 .education-date, .experience-date {
   font-size: 0.9rem;
   color: #555;
+  font-style: italic;
 }
 
 .education-degree {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: #555;
 }
 
 .experience-company {
   margin: 0;
   margin-bottom: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-style: italic;
   color: #555;
 }
@@ -90,6 +94,7 @@
   line-height: 1.5;
   color: #444;
   white-space: pre-line;
+  text-align: justify;
 }
 
 .placeholder-text {
@@ -99,9 +104,71 @@
   font-size: 0.9rem;
 }
 
+/* PDF Export button */
+.export-button-container {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 10;
+}
+
+.export-pdf-button {
+  background-color: #4a6fff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.export-pdf-button:hover {
+  background-color: #3a5cff;
+  transform: translateY(-1px);
+}
+
+.export-pdf-button:active {
+  transform: translateY(0);
+}
+
+.export-pdf-button svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .resume-preview {
+    padding: 1.5rem;
+    min-height: auto;
+  }
+  
+  .resume-name {
+    font-size: 1.8rem;
+  }
+  
+  .resume-contact {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+}
+
+/* Print styles */
 @media print {
   .resume-preview {
     box-shadow: none;
     padding: 0;
+    margin: 0;
+    border: none;
+  }
+  
+  .export-button-container {
+    display: none;
   }
 } 

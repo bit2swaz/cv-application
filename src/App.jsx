@@ -1,32 +1,50 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Header from './components/Header'
 import FormSection from './components/FormSection'
 import ResumePreview from './components/ResumePreview'
+import ThemeToggle from './components/ThemeToggle'
 import './App.css'
 
 function App() {
-  const [generalInfo, setGeneralInfo] = useState({
-    fullName: '',
-    email: '',
-    phone: ''
+  // Load data from localStorage or use defaults
+  const [generalInfo, setGeneralInfo] = useState(() => {
+    const saved = localStorage.getItem('generalInfo');
+    return saved ? JSON.parse(saved) : {
+      fullName: '',
+      email: '',
+      phone: ''
+    };
   });
 
-  const [educationList, setEducationList] = useState([{
-    id: Date.now(),
-    schoolName: '',
-    titleOfStudy: '',
-    dateOfStudy: ''
-  }]);
+  const [educationList, setEducationList] = useState(() => {
+    const saved = localStorage.getItem('educationList');
+    return saved ? JSON.parse(saved) : [{
+      id: Date.now(),
+      schoolName: '',
+      titleOfStudy: '',
+      dateOfStudy: ''
+    }];
+  });
 
-  const [experienceList, setExperienceList] = useState([{
-    id: Date.now(),
-    companyName: '',
-    positionTitle: '',
-    responsibilities: '',
-    dateFrom: '',
-    dateTo: '',
-    currentlyWorking: false
-  }]);
+  const [experienceList, setExperienceList] = useState(() => {
+    const saved = localStorage.getItem('experienceList');
+    return saved ? JSON.parse(saved) : [{
+      id: Date.now(),
+      companyName: '',
+      positionTitle: '',
+      responsibilities: '',
+      dateFrom: '',
+      dateTo: '',
+      currentlyWorking: false
+    }];
+  });
+
+  // Save to localStorage whenever data changes
+  useEffect(() => {
+    localStorage.setItem('generalInfo', JSON.stringify(generalInfo));
+    localStorage.setItem('educationList', JSON.stringify(educationList));
+    localStorage.setItem('experienceList', JSON.stringify(experienceList));
+  }, [generalInfo, educationList, experienceList]);
 
   const updateGeneralInfo = (field, value) => {
     setGeneralInfo({
@@ -88,6 +106,7 @@ function App() {
 
   return (
     <div className="app">
+      <ThemeToggle />
       <Header />
       <main className="app-container">
         <div className="form-container">
@@ -113,7 +132,7 @@ function App() {
         </div>
       </main>
       <footer className="app-footer">
-        <p>Resume Builder - Built with React</p>
+        <p>Resume Builder | by bit2swaz</p>
       </footer>
     </div>
   )

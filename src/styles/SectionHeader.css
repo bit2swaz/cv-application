@@ -1,12 +1,14 @@
 .section-header {
   margin-bottom: 1rem;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid var(--border-color);
   padding-bottom: 0.5rem;
+  transition: border-color 0.3s ease;
 }
 
 .section-header h2 {
   margin: 0;
   font-size: 1.25rem;
-  color: #333;
+  color: var(--text-primary);
   font-weight: 600;
+  transition: color 0.3s ease;
 } 
