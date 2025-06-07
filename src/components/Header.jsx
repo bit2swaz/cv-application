@@ -4,8 +4,8 @@ import '../styles/Header.css';
 function Header() {
   return (
     <header className="header">
-      <h1>CV Maker</h1>
-      <p>Create your professional CV easily</p>
+      <h1>Resume Builder</h1>
+      <p>Create your professional resume in minutes</p>
     </header>
   );
 }
